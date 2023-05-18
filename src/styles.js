@@ -5,6 +5,7 @@ export const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#fff',
     marginHorizontal: 20,
+   
 
   },
   bienvenida: {

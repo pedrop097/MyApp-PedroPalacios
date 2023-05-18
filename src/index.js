@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import { Text, View} from 'react-native';
+import { Button, Text, View } from 'react-native';
 import { styles } from './styles';
-import { Events, Input, CustomModal} from './components/index';
+import { Events, Input, CustomModal } from './components/index';
 
 export default function App() {
   const [text, setText] = useState('');
@@ -40,32 +40,34 @@ export default function App() {
 
 
   return (
-   
+
     <View style={styles.container}>
-    
-    <Text style={styles.bienvenida}>BIENVENIDO A DIONISO SHOP DE BEBIDAS</Text>
-    <Text style={styles.bienvenida}>Nuestros productos:</Text>
-    <Text style={styles.bienvenida2} >CERVEZAS</Text>
-    <Text style={styles.bienvenida2}>LICORES</Text>
-    <Text style={styles.bienvenida2}>VINOS</Text>
-      <Input 
-      
+
+      <Text style={styles.bienvenida}>BIENVENIDO A DIONISO SHOP DE BEBIDAS</Text>
+      <Text style={styles.bienvenida}>Nuestros productos:</Text>
+      <Text style={styles.bienvenida2} >CERVEZAS</Text>
+      <Text style={styles.bienvenida2}>LICORES</Text>
+      <Text style={styles.bienvenida2}>VINOS</Text>
+
+      <Input
+
         buttonColor='#52528C'
         buttonTitle='Add'
         onChangeText={(text) => setText(text)}
         onHandlerButton={onAddEvent}
-        placeholder='Escribe el producto que sea comprar' 
+        placeholder='Escribe el producto que sea comprar'
         value={text}
+
       />
-     
+
       <Events events={events} onSelectItem={onHandlerEvent} />
-      <CustomModal 
-        isVisible={modalVisible} 
-        animationType='slide' 
-        onCancel={onHandlerCancelModal} 
-        onDelete={onHandlerDeleteEvent} 
+      <CustomModal
+        isVisible={modalVisible}
+        animationType='slide'
+        onCancel={onHandlerCancelModal}
+        onDelete={onHandlerDeleteEvent}
         selectedEvent={selectedEvent}
-        
+
       />
     </View>
   );
