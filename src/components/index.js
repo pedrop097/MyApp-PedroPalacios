@@ -1,3 +1,4 @@
-export { default as Input} from './input/index';
-export { default as Events } from './events/index';
-export { default as CustomModal } from './modal/index';
+export { default as CategoryItem } from "./category-item/index";
+export { default as ProductItem } from "./product-item/index";
+export { default as CartItem} from "./cart-item/index."
+export { default as OrderItem } from "./order-item/index";
